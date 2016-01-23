@@ -1,0 +1,26 @@
+<target name="bulkRetrieve">				
+	<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ApexClass" retrieveTarget="/home/dpeter/sf/metadata"/>
+	<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ApexComponent" retrieveTarget="/home/dpeter/sf/metadata"/>
+	<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ApexPage" retrieveTarget="/home/dpeter/sf/metadata"/>
+	<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ApexTrigger" retrieveTarget="/home/dpeter/sf/metadata"/>
+	<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="CustomApplication" retrieveTarget="/home/dpeter/sf/metadata"/>
+
+	<!-- SOME ENTRIES OMITTED FOR BREVITY -->
+
+	<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Scontrol" retrieveTarget="/home/dpeter/sf/metadata"/>
+	<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Workflow" retrieveTarget="/home/dpeter/sf/metadata"/>		
+	
+	
+	<!-- crank up the pollWaitMillis / maxPoll on the static resources, since they are large, binary files -->		
+	<sf:bulkRetrieve pollWaitMillis="30000" maxPoll="100" username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="StaticResource" retrieveTarget="/home/dpeter/sf/metadata"/>		
+	
+	<!-- 
+	ERROR (api version issue, try again with new release) <sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="ArticleType" retrieveTarget="/home/dpeter/sf/metadata"/>
+	ERROR (not in org) <sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="EntitlementTemplate" retrieveTarget="/home/dpeter/sf/metadata"/>
+	ERROR (api version issue, try again with new release)<sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="rules" retrieveTarget="/home/dpeter/sf/metadata"/>
+	ERROR (not in org) <sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Territory" retrieveTarget="/home/dpeter/sf/metadata"/>
+	ERROR (not in org) <sf:bulkRetrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="Translations" retrieveTarget="/home/dpeter/sf/metadata"/>
+	-->
+
+
+</target>	
